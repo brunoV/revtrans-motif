@@ -1,0 +1,78 @@
+revtrans-motif
+==============
+
+Reverse translate a Profam-like protein motif
+---------------------------------------------
+
+This script takes a protein motif as input and returns a degenerate
+oligonucleotide sequence corresponding to it. The main reason for doing this
+is to design degenerate primers that amplify a given sequence pattern.
+
+The input motif consists of a string of one-letter residues, with any of
+the following syntactic elements:
+
+* `[...]`: **Redundant position.**
+
+A position in which more than one residue is allowed. Example: 
+
+    [TS]YW[RKSD]
+     ^^    ^^^^
+
+* `[^...]`: **Negated position.**
+
+A position in which any residue is allowed, saved for those between
+brackets. Example:
+
+    [^PW]MK[LAE]
+      ^^
+
+* `(...){n,m,...}`: **Repeated motif.**
+
+A motif that is repeated B<n> or B<m> times. It can have any of the previous
+syntactic elements. Example:
+
+    A[SN]C(TXX){2,4,8}
+           ^^^
+
+The allowed letters are those that correspond to the 20 natural aminoacids,
+plus:
+
+    B = N + D
+    Z = Q + E
+    X = All
+
+
+### Dependencies
+
+This module depends on the following:
+
+- Test::More
+- List::MoreUtils
+- Bio::Tools::CodonTable
+- Bio::Seq
+- Pod::Usage
+- Getopt::Long
+
+
+### Installation
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+### Support and Documentation
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc revtrans_motif
+
+### Copyright and Licence
+
+Copyright (C) 2009 **Bruno Vecchi**
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
