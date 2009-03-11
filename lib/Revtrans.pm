@@ -11,9 +11,9 @@ use Carp qw(croak);
 use Getopt::Long;
 use Pod::Usage;
 use Sub::Exporter -setup => {
-   exports => [ qw(reverse_translate_motif negated_aas_to_codon) ],
+   exports => [ qw(reverse_translate_motif) ],
    groups  => { default => [ qw(reverse_translate_motif)] },
-   };
+};
 
 sub reverse_translate_motif {
    # Main subroutine. It takes a Profam-like motif and returns its
