@@ -38,11 +38,11 @@ Using interactively at the command prompt:
 
 =cut
 
-# File IO, default to STDIN.
+# Parse command line arguments.
 my ($help, $infile);
 GetOptions( "h|help" => \$help, "i|infile:s" => \$infile );
 
-# Parse command line arguments.
+# File IO, default to STDIN.
 unless (defined $infile) { $infile = '-' };
 open( my $fh, "<$infile" ) or die "Couldn't open file $infile: $!\n";
 
