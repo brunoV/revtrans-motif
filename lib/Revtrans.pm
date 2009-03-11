@@ -8,8 +8,6 @@ use Bio::Tools::CodonTable;
 use List::MoreUtils qw(uniq);
 use Carp qw(croak);
 
-use Getopt::Long;
-use Pod::Usage;
 use Sub::Exporter -setup => {
    exports => [ qw(reverse_translate_motif) ],
    groups  => { default => [ qw(reverse_translate_motif)] },

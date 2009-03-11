@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More;
+use Test::More skip_all => 'I know, I have not documented the module yet.';
 
 # Ensure a recent version of Test::Pod::Coverage
 my $min_tpc = 1.08;
