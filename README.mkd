@@ -52,7 +52,7 @@ This module depends on the following:
 - Bio::Seq
 - Pod::Usage
 - Getopt::Long
-
+- Sub::Exporter
 
 ### Installation
 

@@ -11,10 +11,10 @@ requires 'Bio::Tools::CodonTable';
 requires 'Bio::Seq';
 requires 'Pod::Usage';
 requires 'Getopt::Long';
+requires 'Sub::Exporter';
 
 install_script 'bin/revtrans-motif';
 
-#auto_install;
+auto_install;
 
 WriteAll;
-
