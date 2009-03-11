@@ -28,7 +28,7 @@ brackets. Example:
 
 * `(...){n,m,...}`: **Repeated motif.**
 
-A motif that is repeated B<n> or B<m> times. It can have any of the previous
+A motif that is repeated **n** or **m** times. It can have any of the previous
 syntactic elements. Example:
 
     A[SN]C(TXX){2,4,8}
