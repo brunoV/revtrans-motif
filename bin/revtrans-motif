@@ -1,12 +1,7 @@
 #!/usr/bin/perl
 use warnings;
 use strict;
-
-use Bio::Seq;
-use Bio::Tools::CodonTable;
-
-use List::MoreUtils qw(uniq);
-use Carp qw(croak);
+use Revtrans;
 
 use Getopt::Long;
 use Pod::Usage;
