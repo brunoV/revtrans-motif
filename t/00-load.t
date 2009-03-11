@@ -3,7 +3,7 @@
 use Test::More tests => 1;
 
 BEGIN {
-	use_ok( 'revtrans_motif' );
+	use_ok( 'Revtrans' );
 }
 
-diag( "Testing revtrans_motif $revtrans_motif::VERSION, Perl $], $^X" );
+diag( "Testing Revtrans $revtrans_motif::VERSION, Perl $], $^X" );

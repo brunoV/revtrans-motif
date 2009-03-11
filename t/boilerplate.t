@@ -39,7 +39,7 @@ sub module_boilerplate_ok {
 TODO: {
   local $TODO = "Need to replace the boilerplate text";
 
-  not_in_file_ok(README =>
+  not_in_file_ok('README.mkd' =>
     "The README is used..."       => qr/The README is used/,
     "'version information here'"  => qr/to provide version information/,
   );
@@ -48,7 +48,7 @@ TODO: {
     "placeholder date/time"       => qr(Date/time)
   );
 
-  module_boilerplate_ok('lib/revtrans_motif.pm');
+  module_boilerplate_ok('lib/Revtrans.pm');
 
 
 }
